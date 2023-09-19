@@ -6,8 +6,10 @@ Start with width, then error check height
 //Global Variables
 int appWidth, appHeight; //CAUTION: decimals are truncated in ints, not floats or doubles
 float widthSquare, heightSquare;
-float x0, x1, x2;
-float y0, y1, y2, y3, y4;
+int numPadColums = 3;
+float[] x = new float [numPadColumns];
+int numPadRow = 3;
+float[] y = new float [numPadRow]
 //
 void setup() {
   size (400, 600);
@@ -17,14 +19,14 @@ void setup() {
   //Population of rect() variables 
   widthSquare = ;
   heightSquare = ;
-  x0 = ;
-  x1 = ;
-  x2 = ;
-  y0 = ;
-  y1 = ;
-  y2 = ;
-  y3 = ;
-  y4 = ;
+  x0 = widthSquare*1/2;
+  x1 = widthSquare*3/2;
+  x2 = widthSquare*5/2;
+  y0 = widthSquare*5/2;
+  y1 = widthSquare*7/2;
+  y2 = widthSquare*9/2;
+  y3 = widthSquare*11/2;
+  y4 = widthSquare*14/2;
   //
   //Nested FOR, reading rect() arrays
   //
@@ -46,6 +48,11 @@ void draw() {
 } //End draw
 //
 void mousePressed() {
+  //mousex> && mousex< && mouseY> && mouseY<
+  //x0, Y0, widthSquare, heightSquare
+  if ( mouseX>x0 && mouseX<x0+widthSquare && mouseY>y0 && mouseY<y0+widthSquare ) println("1");
+  // CAUTION: finish mousePressing when arrays can be read
+  //
 } //End mousePressed
 //
 void keyPressed() {
