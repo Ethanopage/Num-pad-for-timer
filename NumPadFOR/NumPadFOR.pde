@@ -8,8 +8,8 @@ int appWidth, appHeight; //CAUTION: decimals are truncated in ints, not floats o
 float widthSquare, heightSquare;
 int numPadColums = 3;
 float[] x = new float [numPadColumns];
-int numPadRow = 3;
-float[] y = new float [numPadRow]
+int numPadRow = 5;
+float[] y = new float [numPadRow];
 //
 void setup() {
   size (400, 700);
@@ -17,7 +17,7 @@ void setup() {
   appHeight = height;
   //
   //Population of rect() variables 
-  widthSquare = *1/4;
+  widthSquare = appWidth*1/4;
   heightSquare = widthSquare;
   /* Primitive Variable Prototyping 
   x0 = widthSquare*1/2;
