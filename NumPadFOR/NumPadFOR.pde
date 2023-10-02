@@ -10,6 +10,7 @@ int numPadColums = 3;
 float[] x = new float [numPadColumns];
 int numPadRow = 5;
 float[] y = new float [numPadRow];
+float border=0.0;
 //
 void setup() {
   size (400, 700);
@@ -19,7 +20,16 @@ void setup() {
   //Population of rect() variables 
   widthSquare = appWidth*1/4;
   heightSquare = widthSquare;
-  /* Primitive Variable Prototyping 
+  if ( widthSquare*8 <= appHeight ) {
+    println("true");
+    // Empty IF
+  } else {
+    println("false");
+    widthSquare = heightSquare = appHeight*1/8;
+    border = appwidth - ( widthSquare*1/2 + widthSquare*3 + widthSquare*1/2 );
+    border = border*1/2; // using one variable saves system resources 
+  } //End Height Error Check
+/* Primitive Variable Prototyping 
   x0 = widthSquare*1/2;
   x1 = widthSquare*3/2;
   x2 = widthSquare*5/2;
